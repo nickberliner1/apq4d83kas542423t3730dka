@@ -1,4 +1,5 @@
 # Nick's Frequenz Challenge
+[Link](https://apq4d83kas542423t3730dka.vercel.app) to the app hosted on Vercel
 
 ### Running the app
 
