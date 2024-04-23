@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "../../General/Search";
 import { fetchOrganizations } from "../../../queries/organizations";
+import { fakeOrganizations } from "../../../queries/organizations";
 
 interface Props {
 	onOrgSelect: (orgName: string | null) => void;
@@ -20,7 +21,7 @@ const SearchOrganizations: React.FC<Props> = ({ onOrgSelect }) => {
 	return (
 		<Search
 			optionProps={orgs?.map((org) => org.login)}
-			textLabel="Organizations"
+			textLabel="Organization"
 			value=""
 			onChange={onOrgSelect}
 		/>

@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Nick's Frequenz Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Running the app
 
-## Available Scripts
+In order to run the app on your machine, please follow these steps:
 
-In the project directory, you can run:
+1. Navigate on your terminal to the folder/directory where you would like to clone the app.
+2. Run the command `git clone https://github.com/nickberliner1/apq4d83kas542423t3730dka`.
+    - This will create a folder called "apq4d83kas542423t3730dka" in your directory
+3. Run the command `cd apq4d83kas542423t3730dka` in your terminal.
+4. Run the command `npm install`.
+5. Run the command `npm start`.
+    - This will open automatically your browser at the `localhost:3000` url
+6. If you encounter errors related to Github's API call limit:
+    - Change `line 15` in `SearchOrganizations.tsx` to `const data = fakeOrganizations;`
+    - Change `line 82` in `RepositoriesList.tsx` to `const data = fakeRepositories;`
+    - Change `line 65` in `App.tsx` to `<RepositoriesList selectedOrg='gumgum' />`
+    - This will populate the app with static data and allow you to still perform all the same functions without calling the API.
 
-### `npm start`
+### Using the app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Upon opening the app, you will see an input filter which allows you to choose a Github organization.
+    - There will also be a switch, for you to change the app into `Light mode` if you prefer.
+2. After selecting an organization, a list of their repositories will appear.
+3. You can navigate to other pages to see all repositories, or you can filter them.
+4. On the right side of the screen, there are filters which allow you to:
+    - Filter repos by name
+    - Filter repos by minimum and maximum open issues
+    - Filter repos by minimum and maximum stars

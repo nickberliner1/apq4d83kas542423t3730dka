@@ -22,18 +22,18 @@ const Search: React.FC<Props> = ({
 	const handleChange = (event: any, newValue: string | null) => {
 		setSearchValue(newValue);
 		onChange(newValue);
-		console.log("value", value);
 	};
 
 	return (
 		<Autocomplete
 			options={optionProps}
 			renderInput={(params) => (
-				<TextField {...params} label={textLabel} variant="standard" />
+				<TextField {...params} label={textLabel} />
 			)}
 			autoHighlight
 			value={searchValue}
 			onChange={handleChange}
+			sx={{ width: 300 }}
 		/>
 	);
 };
